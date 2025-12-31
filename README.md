@@ -63,3 +63,4 @@ Due to the size and complexity of the original dataset, a staged data reduction 
 
 **Rationale**
 The reductions were not random sampling but targeted filtering based on domain relevance (electricity consumption). This enabled efficient feature engineering, particularly the creation of lag features, by significantly lowering memory usage and computational overhead during group-based time-series transformations.
+Methodology
