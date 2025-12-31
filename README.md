@@ -97,3 +97,7 @@ The project incorporated several engineered features to improve predictive perfo
 
 </details>
 
+### Categorical Encoding
+
+- Categorical variables, particularly primary_use, were transformed using one-hot encoding.
+- Encoding was applied within the modeling pipeline to prevent data leakage and ensure consistency across training and testing datasets.
