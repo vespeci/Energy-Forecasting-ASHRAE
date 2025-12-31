@@ -37,7 +37,9 @@ The raw dataset required several preparation steps before modeling to ensure dat
 #### Dataset Reduction 
 Due to the size and complexity of the original dataset, a staged data reduction strategy was applied to align the project scope with the capstone objectives and available computational resources.
 
-<details>
+<Details>
+
+<summary>Click to expand for details</summary>
     
 **First Reduction: Meter Type Selection**
 - The original dataset contained multiple meter types.
@@ -62,8 +64,36 @@ Due to the size and complexity of the original dataset, a staged data reduction 
 *Impact of second reduction:*
 - *Number of rows reduced to ~4 million*
 - *Number of buildings reduced to 460*
-</details>
+</Details>
 
 **Rationale**
 The reductions were not random sampling but targeted filtering based on domain relevance (electricity consumption). This enabled efficient feature engineering, particularly the creation of lag features, by significantly lowering memory usage and computational overhead during group-based time-series transformations.
+
+### Missing Value Handling
+Weather data contained missing values across multiple variables.  
+To address this, missing values were handled using **forward filling and interpolation** for time-dependent weather features.
+
+### Feature Engineering
+The project incorporated several engineered features to improve predictive performance.
+
+<details>
+    
+<summary>Click to expand for details</summary>
+
+- **Temporal lag features**  
+  Created from historical meter readings to capture short-term and seasonal consumption patterns  
+  *(e.g., lag_1, lag_24, lag_168, lag_720)*
+
+- **Time-based features**  
+  Derived from timestamps to represent daily and seasonal cycles  
+  *(e.g., hour, day, month, with cyclic encodings hour_sin/hour_cos, month_sin/month_cos)*
+
+- **Building characteristics**  
+  Incorporated static metadata to improve predictive power  
+  *(e.g., age_bldg)*
+
+- **Degree days**  
+  Added cooling (CDD) and heating (HDD) indicators to capture climate-driven demand
+
+</details>
 
