@@ -37,6 +37,7 @@ The raw dataset required several preparation steps before modeling to ensure dat
 #### Dataset Reduction 
 Due to the size and complexity of the original dataset, a staged data reduction strategy was applied to align the project scope with the capstone objectives and available computational resources.
 
+<details>
 **First Reduction: Meter Type Selection**
 - The original dataset contained multiple meter types.
 - This project focuses specifically on electricity consumption, corresponding to meter = 0.
@@ -60,6 +61,7 @@ Due to the size and complexity of the original dataset, a staged data reduction 
 *Impact of second reduction:*
 - *Number of rows reduced to ~4 million*
 - *Number of buildings reduced to 460*
+</details>
 
 **Rationale**
 The reductions were not random sampling but targeted filtering based on domain relevance (electricity consumption). This enabled efficient feature engineering, particularly the creation of lag features, by significantly lowering memory usage and computational overhead during group-based time-series transformations.
