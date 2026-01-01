@@ -200,3 +200,14 @@ Model performance was evaluated using:
 - **R² (Coefficient of Determination)** – Measures how well predictions explain variance
 - **RMSE (Root Mean Squared Error)** – Penalizes larger prediction errors
 - **MAE (Mean Absolute Error)** – Measures average absolute error
+
+### Results
+
+| Model            | RMSE   | MAE   | R²     |
+|------------------|--------|-------|--------|
+| Linear Regression (Baseline) | 189.87 | 96.82  | **0.315** |
+| Decision Tree     | 245.55 | 108.10 | -0.358 |
+| Random Forest     | 239.50 | 105.33 | -0.326 |
+| XGBoost     | 190.36 | 88.58  | 0.269  |
+| LightGBM          | 193.61 | **87.43** | 0.252  |
+
