@@ -67,7 +67,8 @@ Building 223.0 (Education) is the highest consumer, exceeding 21 million kWh. Of
 - Monthly Consumption Trends for Top 10 Buildings
 
 Line graph showing monthly energy consumption for the same top 10 buildings. Each line tracks how usage changes over the year, revealing seasonal patterns and operational variability.
-![Uploading lineplot of tp10 bldg id.png…]()
+<img width="1014" height="547" alt="lineplot of tp10 bldg id" src="https://github.com/user-attachments/assets/5d17bc71-0ee6-4045-b60b-ef17ee46c9e4" />
+
 
 
 Building 223.0 maintains consistently high usage year-round, while others like 475.0 show significant seasonal dips. This helps distinguish stable vs variable consumption profiles
