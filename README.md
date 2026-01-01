@@ -67,13 +67,14 @@ Due to the size and complexity of the original dataset, a staged data reduction 
 </Details>
 
 **Rationale**
+
 The reductions were not random sampling but targeted filtering based on domain relevance (electricity consumption). This enabled efficient feature engineering, particularly the creation of lag features, by significantly lowering memory usage and computational overhead during group-based time-series transformations.
 
-### Missing Value Handling
+#### Missing Value Handling
 Weather data contained missing values across multiple variables.  
 To address this, missing values were handled using **forward filling and interpolation** for time-dependent weather features.
 
-### Feature Engineering
+#### Feature Engineering
 The project incorporated several engineered features to improve predictive performance.
 
 <details>
@@ -97,7 +98,7 @@ The project incorporated several engineered features to improve predictive perfo
 
 </details>
 
-### Categorical Encoding
+#### Categorical Encoding
 
 - Categorical variables, particularly primary_use, were transformed using one-hot encoding.
 - Encoding was applied within the modeling pipeline to prevent data leakage and ensure consistency across training and testing datasets.
