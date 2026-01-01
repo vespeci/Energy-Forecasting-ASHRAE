@@ -56,10 +56,23 @@ Average consumption per building highlights intensity. Healthcare and Utility bu
 Energy Use Intensity (kWh/m²) normalizes consumption by floor area. Categories with high EUI, such as Utility, indicate more energy use per square meter — often reflecting lower efficiency or inherently energy-intensive operations. Lower EUI categories suggest more efficient energy use relative to building size.
 <br><br>
 
-- EUI per Primary Use
-<img width="2025" height="553" alt="EUI" src="https://github.com/user-attachments/assets/2022e2fd-1b9b-40dd-af54-891160e65ff8" />
+- Top 10 Highest Consumption for Buildings
 
-Energy Use Intensity (kWh/m²) normalizes consumption by floor area. Categories with high EUI, such as Utility, indicate more energy use per square meter — often reflecting lower efficiency or inherently energy-intensive operations. Lower EUI categories suggest more efficient energy use relative to building size.
+Bar chart showing the total annual energy consumption (kWh) for the top 10 buildings, labeled by ID and primary use. This identifies the largest individual contributors to overall demand.
+<img width="1389" height="590" alt="top 10 bldg id" src="https://github.com/user-attachments/assets/7f2266e2-a28c-43f2-86e3-cbad3d5ea3dd" />
+
+Building 223.0 (Education) is the highest consumer, exceeding 21 million kWh. Office, Healthcare, and Public Services buildings also appear frequently among top consumers.
+<br><br>
+
+- Monthly Consumption Trends for Top 10 Buildings
+
+Line graph showing monthly energy consumption for the same top 10 buildings. Each line tracks how usage changes over the year, revealing seasonal patterns and operational variability.
+![Uploading lineplot of tp10 bldg id.png…]()
+
+
+Building 223.0 maintains consistently high usage year-round, while others like 475.0 show significant seasonal dips. This helps distinguish stable vs variable consumption profiles
+
+
 
 
 
