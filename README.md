@@ -203,6 +203,11 @@ Model performance was evaluated using:
 
 ### Results
 
+#### Model Performance (Train/Validation)
+All models were trained and evaluated using R², RMSE, and MAE.
+
+<div align ="center">
+    
 | Model            | RMSE   | MAE   | R²     |
 |------------------|--------|-------|--------|
 | Linear Regression (Baseline) | 189.87 | 96.82  | **0.315** |
@@ -210,4 +215,13 @@ Model performance was evaluated using:
 | Random Forest     | 239.50 | 105.33 | -0.326 |
 | XGBoost     | 190.36 | 88.58  | 0.269  |
 | LightGBM          | 193.61 | **87.43** | 0.252  |
+
+</div>
+
+**Interpretation**
+
+- **Linear Regression (Baseline):** Achieved the **best R²** and a **competitive RMSE**, proving it’s a surprisingly strong baseline.  
+- **Decision Tree & Random Forest:** Underperformed, with negative R² values and higher RMSE.  
+- **LightGBM:** Lowest MAE, showing strong error minimization, but weaker R².  
+- **XGBoost:** RMSE close to Linear Regression, making it the strongest advanced model.  
 
