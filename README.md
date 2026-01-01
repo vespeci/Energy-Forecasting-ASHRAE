@@ -29,6 +29,40 @@ The dataset comes from the ASHRAE Great Energy Predictor III competition.
 - Original Number of Buildings: 1449 Building ID
 - Original size: 20.1M rows
 
+## Exploratory Data Analysis
+
+This EDA investigates energy consumption patterns across buildings with diverse primary uses. The analysis is structured to reveal both scale-driven and intensity-driven consumption behaviors
+
+- Number of Buildings per Primary Use
+
+<img width="1489" height="590" alt="no  bldgs" src="https://github.com/user-attachments/assets/82ffaf6c-3d4a-4037-b3fa-4588ba4ec11a" />
+The dataset is dominated by Education buildings, with Public Services, Entertainment/Public Assembly, and Office also well represented, while Utility, Retail, and Parking have relatively few samples.
+<br><br>
+
+- Sum Consumption per Primary Use
+
+<img width="2012" height="553" alt="output1" src="https://github.com/user-attachments/assets/028b632c-4305-4084-b081-37b715b04d18" />
+Total annual consumption per category shows Education as the largest consumer, followed by Office and Public Services. This reflects the scale of these categories in the dataset. Smaller categories contribute less to overall totals, but their intensity will be explored next.
+<br><br>
+
+- Average Consumption per Primary Use
+<img width="2012" height="553" alt="output" src="https://github.com/user-attachments/assets/65601575-1765-40ac-a36d-3bf76760974a" />
+Average consumption per building highlights intensity. Healthcare and Utility buildings consume far more energy per building compared to Education or Office. This distinction between scale and intensity is critical for fair interpretation.
+<br><br>
+
+- EUI per Primary Use
+<img width="2025" height="553" alt="EUI" src="https://github.com/user-attachments/assets/2022e2fd-1b9b-40dd-af54-891160e65ff8" />
+
+Energy Use Intensity (kWh/m²) normalizes consumption by floor area. Categories with high EUI, such as Utility, indicate more energy use per square meter — often reflecting lower efficiency or inherently energy-intensive operations. Lower EUI categories suggest more efficient energy use relative to building size.
+<br><br>
+
+- EUI per Primary Use
+<img width="2025" height="553" alt="EUI" src="https://github.com/user-attachments/assets/2022e2fd-1b9b-40dd-af54-891160e65ff8" />
+
+Energy Use Intensity (kWh/m²) normalizes consumption by floor area. Categories with high EUI, such as Utility, indicate more energy use per square meter — often reflecting lower efficiency or inherently energy-intensive operations. Lower EUI categories suggest more efficient energy use relative to building size.
+
+
+
 ## Methodology
 
 ### Data Preparation
@@ -102,3 +136,30 @@ The project incorporated several engineered features to improve predictive perfo
 
 - Categorical variables, particularly primary_use, were transformed using one-hot encoding.
 - Encoding was applied within the modeling pipeline to prevent data leakage and ensure consistency across training and testing datasets.
+
+### Modeling 
+
+The following models were implemented to predict building energy consumption.
+
+#### Baseline Model
+-  A **Linear Regression** model was used as the baseline to establish a simple and interpretable performance benchmark.
+
+#### Advanced Models
+- **Decision Tree** – captures non-linear relationships
+- **Random Forest** – reduces overfitting using multiple trees
+- **LightGBM** – efficient gradient boosting for large datasets
+- **XGBoost** – high-performance gradient boosting model
+
+Model pipelines were built to ensure consistent preprocessing and fair comparison across all models.
+
+#### Hyperparameter Tuning
+
+Hyperparameter tuning was conducted on the advanced models using cross-validation to evaluate potential performance improvements. Despite systematic tuning, the optimized configurations did not demonstrate consistent gains over the baseline model settings on the validation data.
+
+### Evaluation Metrics
+
+Model performance was evaluated using:
+
+- **R² (Coefficient of Determination)** – Measures how well predictions explain variance
+- **RMSE (Root Mean Squared Error)** – Penalizes larger prediction errors
+- **MAE (Mean Absolute Error)** – Measures average absolute error
