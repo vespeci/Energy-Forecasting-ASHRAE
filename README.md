@@ -33,30 +33,30 @@ The dataset comes from the ASHRAE Great Energy Predictor III competition.
 
 This EDA investigates energy consumption patterns across buildings with diverse primary uses. The analysis is structured to reveal both scale-driven and intensity-driven consumption behaviors
 
-- Number of Buildings per Primary Use
+- **Number of Buildings per Primary Use**
 
 <img width="1489" height="590" alt="no  bldgs" src="https://github.com/user-attachments/assets/82ffaf6c-3d4a-4037-b3fa-4588ba4ec11a" />
 The dataset is dominated by Education buildings, with Public Services, Entertainment/Public Assembly, and Office also well represented, while Utility, Retail, and Parking have relatively few samples.
 <br><br>
 
-- Sum Consumption per Primary Use
+- **Sum Consumption per Primary Use**
 
 <img width="2012" height="553" alt="output1" src="https://github.com/user-attachments/assets/028b632c-4305-4084-b081-37b715b04d18" />
 Total annual consumption per category shows Education as the largest consumer, followed by Office and Public Services. This reflects the scale of these categories in the dataset. Smaller categories contribute less to overall totals, but their intensity will be explored next.
 <br><br>
 
-- Average Consumption per Primary Use
+- **Average Consumption per Primary Use**
 <img width="2012" height="553" alt="output" src="https://github.com/user-attachments/assets/65601575-1765-40ac-a36d-3bf76760974a" />
 Average consumption per building highlights intensity. Healthcare and Utility buildings consume far more energy per building compared to Education or Office. This distinction between scale and intensity is critical for fair interpretation.
 <br><br>
 
-- EUI per Primary Use
+- **EUI per Primary Use**
 <img width="2025" height="553" alt="EUI" src="https://github.com/user-attachments/assets/2022e2fd-1b9b-40dd-af54-891160e65ff8" />
 
 Energy Use Intensity (kWh/m²) normalizes consumption by floor area. Categories with high EUI, such as Utility, indicate more energy use per square meter — often reflecting lower efficiency or inherently energy-intensive operations. Lower EUI categories suggest more efficient energy use relative to building size.
 <br><br>
 
-- Top 10 Highest Consumption for Buildings
+- **Top 10 Highest Consumption for Buildings**
 
 Bar chart showing the total annual energy consumption (kWh) for the top 10 buildings, labeled by ID and primary use. This identifies the largest individual contributors to overall demand.
 <img width="1389" height="590" alt="top 10 bldg id" src="https://github.com/user-attachments/assets/7f2266e2-a28c-43f2-86e3-cbad3d5ea3dd" />
@@ -64,17 +64,40 @@ Bar chart showing the total annual energy consumption (kWh) for the top 10 build
 Building 223.0 (Education) is the highest consumer, exceeding 21 million kWh. Office, Healthcare, and Public Services buildings also appear frequently among top consumers.
 <br><br>
 
-- Monthly Consumption Trends for Top 10 Buildings
+- **Monthly Consumption Trends for Top 10 Buildings**
 
 Line graph showing monthly energy consumption for the same top 10 buildings. Each line tracks how usage changes over the year, revealing seasonal patterns and operational variability.
 <img width="1014" height="547" alt="lineplot of tp10 bldg id" src="https://github.com/user-attachments/assets/5d17bc71-0ee6-4045-b60b-ef17ee46c9e4" />
 
-
-
 Building 223.0 maintains consistently high usage year-round, while others like 475.0 show significant seasonal dips. This helps distinguish stable vs variable consumption profiles
+<br><br>
 
+- **Monthly Consumption Trends by Primary Use - All Categories (Normalized Monthly Share)**
 
+This line graph shows the normalized monthly share of annual consumption for all primary use categories. Each line represents the proportion of a category’s total annual energy use that occurs in each month. The values are normalized so that each category’s curve sums to 1.0 across the year.
+<img width="1630" height="855" alt="overview" src="https://github.com/user-attachments/assets/0c48cc8b-f095-475c-8faa-373b45cfe6ab" />
 
+Entertainment/Public Assembly and Religious Worship peak mid-year, while Healthcare and Office remain relatively stable. This view reveals seasonal patterns across all sectors, regardless of total consumption.
+<br><br>
+
+- **Top 5 Highest-Consuming Categories (Normalized Monthly Share)**
+
+This focused line graph shows the normalized monthly share of annual consumption for the top 5 primary use categories based on total energy consumption. Like the previous chart, each line sums to 1.0, allowing for fair comparison of seasonal behavior.
+<img width="1018" height="547" alt="top 5" src="https://github.com/user-attachments/assets/8aa52bd0-0175-45a0-8dc4-7a01c435bd7b" />
+
+Education, Office, and Public Services show consistent dips around April and November, with peaks in July–August. These trends help isolate high-impact sectors and support targeted energy management strategies.
+<br><br>
+
+- **Building Age vs Consumption**
+
+<p align="center"><img width="560" height="455" alt="EUI vs KWH" src="https://github.com/user-attachments/assets/6a501f9f-50fc-4362-bd33-1e6b7058866c" /></p>
+Scatter plot comparing building age with total annual consumption. Used to test whether older buildings consume more energy, though no strong correlation is observed.
+<br><br>
+
+- **Building Age vs EUI**
+
+<p align="center"><img width="577" height="455" alt="EUI vs AGE" src="https://github.com/user-attachments/assets/b7c33889-9e74-4188-8fea-1c650b98b35a" /></p>
+Scatter plot comparing building age with energy use intensity (kWh/m²). Tests whether older buildings are less efficient, but no clear trend is observed
 
 
 ## Methodology
