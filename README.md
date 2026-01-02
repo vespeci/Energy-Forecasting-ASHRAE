@@ -201,9 +201,9 @@ Model performance was evaluated using:
 - **RMSE (Root Mean Squared Error)** – Penalizes larger prediction errors
 - **MAE (Mean Absolute Error)** – Measures average absolute error
 
-### Results
+## Results
 
-#### Model Performance (Train/Validation)
+### Model Performance (Train/Validation)
 All models were trained and evaluated using R², RMSE, and MAE.
 
 <div align ="center">
@@ -224,4 +224,83 @@ All models were trained and evaluated using R², RMSE, and MAE.
 - **Decision Tree & Random Forest:** Underperformed, with negative R² values and higher RMSE.  
 - **LightGBM:** Lowest MAE, showing strong error minimization, but weaker R².  
 - **XGBoost:** RMSE close to Linear Regression, making it the strongest advanced model.  
+
+### Hyperparameter Tuning Results 
+
+
+Hyperparameter tuning was conducted **only on LightGBM and XGBoost**, since they showed the most promise among advanced models.  
+
+Below are the validation metrics across three folds for each model:
+
+#### LightGBM (Tuned)
+
+<div align ="center">
+
+| Fold | RMSE       | MAE        | R²       |
+|------|------------|------------|----------|
+| 0    | **195.04** | 86.34      | **0.239** |
+| 1    | 195.12     | **86.31**  | 0.238    |
+| 2    | 195.20     | 86.32      | 0.238    |
+
+</div>
+
+**Average (LightGBM Tuned):**
+
+Slight MAE improvement vs base, but weaker RMSE and R².
+
+- RMSE: 195.12  
+- MAE: **86.32**  
+- R²: 0.238
+
+
+#### XGBoost (Tuned)
+
+<div align ="center">
+
+| Fold | RMSE       | MAE       | R²     |
+|------|------------|-----------|--------|
+| 0    | 192.19     | 93.86     | 0.261  |
+| 1    | 190.18     | 91.05     | 0.269  |
+| 2    | **188.74** | **88.97** | **0.276** |
+
+</div>
+
+**Average (XGBoost Tuned):**
+
+Nearly identical to base, but with slightly worse MAE.
+
+- RMSE: **189.90**  
+- MAE: 90.37  
+- R²: **0.286**
+
+### Interpretation
+- **Linear Regression**: Selected as the best baseline model.  
+- **XGBoost (Base)**: Selected as the best advanced model, outperforming tuned variants.  
+- **Conclusion:** Despite tuning, the base XGBoost remained the most reliable advanced model, while Linear Regression provided the strongest baseline benchmark.
+
+Despite systematic tuning with cross‑validation, the optimized configurations did not consistently outperform the baseline Linear Regression or the base advanced models.
+
+### Test Set Evaluation
+
+Final evaluation was conducted on the held‑out test set using the selected models:  
+**Linear Regression (Baseline)** and **XGBoost (Base)**.
+
+<div align ="center">
+
+| Model                        | RMSE   | MAE   | R²     |
+|------------------------------|--------|-------|--------|
+| Linear Regression (Baseline) | **162.47** | **79.45** | **0.66** |
+| XGBoost (Base)               | 202.04 | 82.28  | 0.46   |
+
+</div>
+
+### Interpretation
+- **Linear Regression:** Outperformed XGBoost on all test metrics — lowest RMSE, lowest MAE, and highest R².  
+- **XGBoost (Base):** Strong validation performance, but weaker generalization on the test set.  
+- **Conclusion:** The baseline Linear Regression model not only held up but **outperformed all advanced models** on unseen data.
+
+### Model Interpretability
+
+- **Linear Regression (Final Model):**  
+
 
