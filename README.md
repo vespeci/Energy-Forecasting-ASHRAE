@@ -303,4 +303,31 @@ Final evaluation was conducted on the held‑out test set using the selected mod
 
 - **Linear Regression (Final Model):**  
 
+Linear Regression was selected as the final deployed model due to its superior test performance and transparent interpretability.
+
+### Coefficient Analysis (Feature Importance)
+The model’s coefficients reveal the global influence of each feature on predictions:
+- `numeric__square_feet` had the strongest positive effect — larger buildings consume more energy.
+- `numeric__HDD` and `numeric__CDD` captured seasonal heating and cooling demand.
+- `categorical__primary_use_Education` and `primary_use_Healthcare` showed distinct usage patterns.
+- `numeric__age_bldg` had a negative coefficient, suggesting older buildings in this dataset tended to consume less energy than newer ones.
+
+<img width="1380" height="679" alt="132" src="https://github.com/user-attachments/assets/e9cdc2c1-15de-4b61-a2d1-3e62ee0915d4" />
+
+
+### SHAP Summary Plot
+SHAP values provide a local view of feature impact across individual predictions:
+- `square_feet`, `floor_count`, and `site_id` were consistently influential across samples.
+- Seasonal and temporal features (`HDD`, `CDD`, `month_cos`, `hour_cos`) explained variability in energy use.
+- Categorical features like `Education`, `Healthcare`, and `Entertainment/public assembly` highlighted operational differences.
+
+<p align = "center"><img width="700" height="700" alt="123" src="https://github.com/user-attachments/assets/5dd16e12-84b4-45e4-9c37-2843f47372c8" /></p>
+
+### Interpretation
+
+The interpretability analysis confirmed that building size and structure (`square_feet`, `floor_count`) were the dominant drivers of energy use. Location (`site_id`) acted as a proxy for site‑specific differences, while seasonal and temporal features (`HDD`, `CDD`, `month_cos`, `hour_cos`) provided smaller but consistent adjustments to account for climate and daily cycles. Categorical building uses (e.g., Education, Healthcare, Entertainment) contributed localized effects, shifting predictions for specific subsets of buildings. Together, coefficients and SHAP values demonstrate that Linear Regression captures both global trends and local variability in energy consumption.
+
+**Methodology Note**
+
+The test set was **never used during training or tuning**. It was reserved strictly for final evaluation to ensure unbiased generalization.
 
