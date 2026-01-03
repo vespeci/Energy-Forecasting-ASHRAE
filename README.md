@@ -2,18 +2,19 @@
 Baseline energy consumption forecasting using building metadata and weather data from the ASHRAE Great Energy Predictor III dataset. Focuses on honest modeling, feature limitations, and baseline performance.
 
 ## Project Overview
-This project leverages machine learning to forecast building energy usage. By combining historical meter readings, building metadata, and engineered features, the models uncover consumption patterns and provide actionable insights for efficiency planning.
+This project leverages machine learning to model and predict building energy consumption using building metadata and weather data from the ASHRAE Great Energy Predictor III dataset.
+Rather than long-term time-series forecasting, the focus is on establishing strong baseline models, understanding feature limitations, and quantifying the key drivers of energy consumption to support data-driven efficiency planning.
 
 **Key Highlights:**
 - Focused on buildings’ electricity consumption.
-- Implements baseline models and advanced ML models.
-- Explores feature engineering techniques like lag features, cyclic encoding and one-hot encoding.
+- Implements baseline and advanced machine learning models for predictive modeling and comparison.
+- Explores feature engineering techniques such as cyclic encoding and one-hot encoding.
 - Evaluates models using R², RMSE, and MAE metrics.
 
 ## Statement of the Problem 
 Energy consumption in buildings is a major driver of both operational costs and environmental impact.
 This project addresses several key challenges:
-- Forecasting → Predicting consumption reliably to support smarter energy management and efficiency planning.
+- Predictive Modeling → Estimating building energy consumption based on structural, operational, and environmental features to support energy planning and prioritization.
 - Scalability → Handling large, complex datasets spanning multiple building id and site id.
 - Feature Selection → Identifying and engineering meaningful features from building metadata and historical usage to improve model performance.
 
@@ -151,10 +152,6 @@ The project incorporated several engineered features to improve predictive perfo
 <details>
     
 <summary>Click to expand for details</summary>
-
-- **Temporal lag features**  
-  Created from historical meter readings to capture short-term and seasonal consumption patterns  
-  *(e.g., lag_1, lag_24, lag_168, lag_720)*
 
 - **Time-based features**  
   Derived from timestamps to represent daily and seasonal cycles  
