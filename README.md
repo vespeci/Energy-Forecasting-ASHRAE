@@ -351,3 +351,16 @@ The test set was **never used during training or tuning**. It was reserved stric
 ### Interpret rankings, not exact savings
   
 - Model outputs are best used to rank priorities rather than estimate precise percentage savings.
+
+## Limitations
+
+- Lag-based features were excluded to avoid unrealistic deployment assumptions.
+- Analysis was limited to a subset of sites due to computational constraints.
+- Operational factors such as occupancy and equipment efficiency were not available.
+- Results reflect predictive associations, not causal relationships.
+
+## Conclusion
+
+This project demonstrates a baseline predictive modeling can effectively estimate and explain building energy consumption using only metadata and weather data. Despite evaluating advanced machine learning models, Linear Regression achieved the strongest performance on unseen data, reinforcing the importance of transparency and generalization.
+
+By combining exploratory analysis, modeling, and interpretability techniques, the project identifies key drivers of energy use and provides practical insights for energy planning and prioritization.
