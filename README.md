@@ -328,3 +328,21 @@ The interpretability analysis confirmed that building size and structure (`squar
 
 The test set was **never used during training or tuning**. It was reserved strictly for final evaluation to ensure unbiased generalization.
 
+## Recommendations
+
+Based on the modeling results and interpretability analysis, the following actionable insights are identified:
+
+- Prioritize large buildings
+Building floor area (square_feet) is the strongest driver of energy consumption. Efficiency efforts should focus on large buildings to maximize potential savings.
+
+- Plan for seasonal demand
+Heating and cooling degree days (HDD, CDD) significantly influence energy use. Energy planning should account for seasonal climate effects.
+
+- Apply sector-specific strategies
+Different building uses (e.g., Education, Healthcare, Entertainment) exhibit distinct consumption patterns, requiring tailored efficiency measures.
+
+- Use baseline models for decision support
+Linear Regression demonstrated the best generalization performance, highlighting the value of simple and interpretable models for early-stage planning.
+
+- Interpret rankings, not exact savings
+Model outputs are best used to rank priorities rather than estimate precise percentage savings.
