@@ -1,5 +1,5 @@
-# Energy Cosnumption Forecasting Capstone
-Baseline energy consumption forecasting using building metadata and weather data from the ASHRAE Great Energy Predictor III dataset. Focuses on honest modeling, feature limitations, and baseline performance.
+# Baseline Modeling and Driver Analysis of Building Energy Consumption 
+Baseline energy consumption predictive modeling using building metadata and weather data from the ASHRAE Great Energy Predictor III dataset.
 
 ## Project Overview
 This project leverages machine learning to model and predict building energy consumption using building metadata and weather data from the ASHRAE Great Energy Predictor III dataset.
