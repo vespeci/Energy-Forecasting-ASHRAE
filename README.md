@@ -86,7 +86,7 @@ Entertainment/Public Assembly and Religious Worship peak mid-year, while Healthc
 This focused line graph shows the normalized monthly share of annual consumption for the top 5 primary use categories based on total energy consumption. Like the previous chart, each line sums to 1.0, allowing for fair comparison of seasonal behavior.
 <img width="1018" height="547" alt="top 5" src="https://github.com/user-attachments/assets/8aa52bd0-0175-45a0-8dc4-7a01c435bd7b" />
 
-Education, Office, and Public Services show consistent dips around April and November, with peaks in July–August. These trends help isolate high-impact sectors and support targeted energy management strategies.
+All top 5 categories show similar seasonal patterns: dips in April and November, peaks in July–August. This consistency suggests broad operational and climate drivers rather than category-specific differences
 <br><br>
 
 - **Building Age vs Consumption**
